@@ -1,4 +1,9 @@
-const knex = require("../../knexfile")
+const knex = require("../db/connection")
+
+function list(){
+    return knex('estimate')
+        .select("*")
+}
 
 function create(newEstimate) {
     return knex('estimate')
@@ -6,15 +11,8 @@ function create(newEstimate) {
         .returning("*")
         .then((data) => data[0]);
     }
-
-    async function list(req, res) {
-        const data = await service.list();
-        res.status(200).json({ data }); 
-      }
-      
       
         module.exports = {
+          list,
           create,
-          list
-  
       };

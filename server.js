@@ -4,10 +4,9 @@ const app = express();
 const knex = require("./api/db/connection");
 const requestRouter = require("./api/request/request.router");
 const cors = require('cors');
+
 app.use(cors());
-
 app.use(express.json());
-
 app.use("/request", requestRouter);
 
 app.use((request, _response, next) => {
@@ -25,7 +24,7 @@ knex.migrate.latest()
   .then((migrations) => {
     console.log("migrations", migrations);
     app.listen(PORT, () => {
-      console.log(`Listening on Port ${PORT}!`);
+      console.log(`${PORT}!`);
     });
   })
   .catch((error) => {
