@@ -1,17 +1,28 @@
 const path = require("path");
 require("dotenv").config();
 
-
-const {
-  DATABASE_URL = "postgres://kwjpntag:6_8ATAh8a94TKpAyNrZeDpHBdjFIvjyR@castor.db.elephantsql.com/kwjpntag",
-} = process.env;
+const DATABASE_URL = process.env.DATABASE_URL;
+if (!DATABASE_URL) {
+  console.error("DATABASE_URL not set");
+  process.exit(1);
+}
 
 module.exports = {
   development: {
     client: "postgresql",
     connection: DATABASE_URL,
     migrations: {
-      directory: path.join(__dirname, 'migrations') 
+      directory: path.join(__dirname, 'migrations')
+    }
+  },
+  production: {
+    client: "postgresql",
+    connection: {
+      connectionString: DATABASE_URL,
+      ssl: { rejectUnauthorized: false } // Adjust SSL based on your DB provider's requirements
+    },
+    migrations: {
+      directory: path.join(__dirname, 'migrations')
     }
   },
 };
