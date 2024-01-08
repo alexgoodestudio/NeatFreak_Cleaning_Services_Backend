@@ -1,6 +1,5 @@
 require("dotenv").config();
 const express = require("express");
-const path = require('path'); // Add this line
 const app = express();
 const knex = require("./api/db/connection");
 const requestRouter = require("./api/request/request.router");
@@ -9,13 +8,6 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json());
 app.use("/request", requestRouter);
-
-// Serve static files from the React app
-app.use(express.static(path.join(__dirname, '..', 'frontend', 'build')));
-// All non-API requests to index.html
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'frontend', 'build', 'index.html'));
-});
 
 app.use((request, _response, next) => {
   next({ status: 404, message: `Not found: ${request.originalUrl}` });
@@ -39,3 +31,9 @@ knex.migrate.latest()
     console.error(error);
     knex.destroy();
   });
+
+
+
+
+
+  
