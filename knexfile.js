@@ -19,7 +19,7 @@ module.exports = {
     client: "postgresql",
     connection: {
       connectionString: DATABASE_URL,
-      ssl: { rejectUnauthorized: false } 
+      // ssl: { rejectUnauthorized: false } 
     },
     migrations: {
       directory: path.join(__dirname, 'migrations')
