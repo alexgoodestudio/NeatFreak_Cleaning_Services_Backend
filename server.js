@@ -9,6 +9,10 @@ app.use(cors());
 app.use(express.json());
 app.use("/request", requestRouter);
 
+app.get('/', (req, res) => {
+  res.redirect('/request/');
+});
+
 app.use((request, _response, next) => {
   next({ status: 404, message: `Not found: ${request.originalUrl}` });
 });
