@@ -13,14 +13,12 @@ app.get('/', (req, res) => {
   res.redirect('/request/');
 });
 
-app.use((request, _response, next) => {
+app.use((req, res, next) => {
   next({ status: 404, message: `Not found: ${request.originalUrl}` });
 });
 
-app.use((error, _request, response, _next) => {
-  console.error(error);
-  const { status = 500, message = "Something went wrong!" } = error;
-  response.status(status).json({ errors: [message] });
+app.use((err, req, res, next) => {
+  res.status(err.status || 500).json({ error: err.message });
 });
 
 const PORT = process.env.PORT || 5001;

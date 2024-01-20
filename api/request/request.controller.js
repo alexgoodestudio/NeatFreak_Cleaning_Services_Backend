@@ -1,3 +1,4 @@
+const empty = require ("../middleware/empty");
 const service = require("./request.service");
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 
@@ -13,7 +14,6 @@ async function create(req, res) {
   }
 
 // async function update(req,res){
-
 //   const data = await service.read(estimateId)
 // }
 
@@ -21,7 +21,10 @@ async function create(req, res) {
   
     module.exports = {
       list: [asyncErrorBoundary(list)],
-      create:[asyncErrorBoundary(create)],
+      create:[
+              empty,
+              asyncErrorBoundary(create)
+            ],
       // update:[asyncErrorBoundary(update)]
 
   };
