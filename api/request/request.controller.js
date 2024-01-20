@@ -12,10 +12,16 @@ async function create(req, res) {
     res.status(201).json({ data });
   }
 
+// async function update(req,res){
+
+//   const data = await service.read(estimateId)
+// }
+
   
   
     module.exports = {
       list: [asyncErrorBoundary(list)],
       create:[asyncErrorBoundary(create)],
+      // update:[asyncErrorBoundary(update)]
 
   };
