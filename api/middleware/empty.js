@@ -3,7 +3,7 @@ function empty(req, res, next) {
   if (!body) {
     return next({
       status: 400,
-      message: "Value cannot be empty",
+      message: "Input value cannot be empty",
     });
   }
   next();
