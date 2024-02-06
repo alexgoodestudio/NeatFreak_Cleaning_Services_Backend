@@ -1,26 +1,33 @@
 const knex = require("../db/connection")
 
-function list(){
-    return knex('estimate')
-        .select("*")
+function list() {
+  return knex('estimate')
+    .select("*")
 }
 
 function create(newEstimate) {
-    return knex('estimate')
-        .insert(newEstimate)
-        .returning("*")
-        .then((data) => data[0]);
-    }
+  return knex('estimate')
+    .insert(newEstimate)
+    .returning("*")
+    .then((data) => data[0]);
+}
 
-// function read(estimateId){
-//     return knex('estimate')
-//         .select("*")
-//         .where({estimate_id : estimateId})
-//         .first();
-// }
-      
-        module.exports = {
-          list,
-          create,
-        //   read
-      };
+function read(id) {
+  return knex('estimate')
+    .select("*")
+    .where({ estimate_id: id }) 
+    .first();
+}
+
+function destroy(id) {
+  return knex('estimate')
+    .where({ estimate_id: id }) 
+    .del();
+}
+
+module.exports = {
+  list,
+  create,
+  read,
+  destroy,
+};
