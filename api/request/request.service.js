@@ -18,6 +18,12 @@ function read(id) {
     .where({ estimate_id: id }) 
     .first();
 }
+function readEmail(email) {
+  return knex('estimate')
+    .select("*")
+    .where({ email_address: email }) 
+    .first();
+}
 
 function destroy(id) {
   return knex('estimate')
@@ -29,5 +35,6 @@ module.exports = {
   list,
   create,
   read,
+  readEmail,
   destroy,
 };

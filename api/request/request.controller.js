@@ -1,11 +1,11 @@
 const empty = require("../middleware/empty");
 const service = require("./request.service");
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
+const emailExists = require("../middleware/emailExists");
 
 async function list(req, res) {
   const data = await service.list();
   res.status(200).json({ data });
-
 }
 
 async function create(req, res) {
@@ -27,6 +27,7 @@ async function read(req, res, next) {
   }
 }
 
+
 async function destroy(req, res) {
   const { estimate_id } = req.params;
   await service.destroy(estimate_id); 
@@ -35,7 +36,7 @@ async function destroy(req, res) {
 
 module.exports = {
   list: asyncErrorBoundary(list),
-  create: [empty, asyncErrorBoundary(create)],
+  create: [empty, emailExists, asyncErrorBoundary(create)],
   read: asyncErrorBoundary(read),
   destroy: asyncErrorBoundary(destroy)
 };
