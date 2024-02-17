@@ -61,8 +61,8 @@ exports.seed = async function(knex) {
     {
       service_type: 'howWeWork',
       responses: "Ready for a cleaner space? Book an easy and quick In-Home estimate at a time that suits you. Our efficient 15-minute process is designed to understand your specific needs, ensuring a cleaning plan that's just right for you.",
-      keywords: 'how we work,process,booking,estimate,in-home estimate'
-    }
+      keywords: 'process,'
+    },
   ];
 
   // Inserts seed entries
