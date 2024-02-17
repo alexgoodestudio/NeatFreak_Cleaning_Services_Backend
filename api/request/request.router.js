@@ -12,5 +12,5 @@ router.route("/:estimate_id")
     .get(controller.read)
     .delete(controller.destroy)
     .all(methodNotAllowed);
-    
+
 module.exports = router;

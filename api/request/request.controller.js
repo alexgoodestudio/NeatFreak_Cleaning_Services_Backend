@@ -1,4 +1,4 @@
-const empty = require("../middleware/empty");
+const empty = require("../middleware/emptySubscribeForm");
 const service = require("./request.service");
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 const emailExists = require("../middleware/emailExists");

@@ -1,0 +1,51 @@
+[
+    {
+      "service_type": "pricing",
+      "keywords": "pricing,cost,charge,price,estimate"
+    },
+    {
+      "service_type": "move",
+      "keywords": "move,moving,relocation,transition"
+    },
+    {
+      "service_type": "cancellation",
+      "keywords": "cancellation,cancel,canceling,notice"
+    },
+    {
+      "service_type": "contact",
+      "keywords": "contact,support,help"
+    },
+    {
+      "service_type": "remove",
+      "keywords": "remove,unsubscribe,opt-out,optout"
+    },
+    {
+      "service_type": "forMoreInfo",
+      "keywords": "more info,information,details,support"
+    },
+    {
+      "service_type": "howToBook",
+      "keywords": "how to book,booking,appointment,estimate"
+    },
+    {
+      "service_type": "where",
+      "keywords": "where,location,service area,Richmond,Virginia"
+    },
+    {
+      "service_type": "ecoFriendly",
+      "keywords": "eco-friendly,environment,sustainable,safety"
+    },
+    {
+      "service_type": "oneTimeClean",
+      "keywords": "one-time clean,one time,special occasion,seasonal refresh,thorough clean"
+    },
+    {
+      "service_type": "recurringCleaning",
+      "keywords": "recurring cleaning,consistently clean,weekly,bi-weekly,monthly"
+    },
+    {
+      "service_type": "howWeWork",
+      "keywords": "how we work,process,booking,estimate,in-home estimate"
+    }
+  ]
+  
