@@ -41,28 +41,34 @@ exports.seed = async function(knex) {
     {
       service_type: 'where',
       responses: "We proudly serve Richmond, Virginia, and the surrounding counties, bringing top-tier, eco-friendly cleaning services to your doorstep.",
-      keywords: 'where,location,service area,Richmond,Virginia'
+      keywords: 'where,location,service area,Richmond,Virginia,Henrico,Short Pump,Manchester,Carytown, North Side, South Side, East End,Goochland'
     },
     {
       service_type: 'ecoFriendly',
       responses: "We're committed to the environment just as much as to cleaning. That's why we use eco-friendly and sustainable products, ensuring a safe and healthy space for you and your loved ones.",
-      keywords: 'eco-friendly,environment,sustainable,safety'
+      keywords: 'eco-friendly,environment,sustainable,safety,safe'
     },
     {
       service_type: 'oneTimeClean',
       responses: "Need a thorough clean for a special occasion or just a seasonal refresh? Our One-Time Clean service has got you covered, using eco-friendly products to make every corner of your home sparkle.",
-      keywords: 'one-time clean,special occasion,seasonal refresh,thorough clean'
+      keywords: 'one-time clean,1 time,special occasion,party,event'
     },
     {
       service_type: 'recurringCleaning',
       responses: "Keep your home consistently clean without lifting a finger. Our Recurring Cleaning service, available weekly, bi-weekly, or monthly, ensures your space is always welcoming and healthy. We use environmentally safe products for your peace of mind.",
-      keywords: 'recurring cleaning,consistently clean,weekly,bi-weekly,monthly'
+      keywords: 'recurring cleaning,recurring,reoccuring,consistently clean,consistently,consistent,2 weeks,weekly,bi-weekly,monthly'
     },
     {
       service_type: 'howWeWork',
       responses: "Ready for a cleaner space? Book an easy and quick In-Home estimate at a time that suits you. Our efficient 15-minute process is designed to understand your specific needs, ensuring a cleaning plan that's just right for you.",
-      keywords: 'process,'
+      keywords: 'process,how'
     },
+    {
+    service_type: 'availability',
+    responses: "We work around your schedule! We do our best to respect your time, and make your home cleaning needs happen when it works best for you. Let us know how we can help by sending over an inquiry to support@getneatfreakclean.com for meeting your busy schedule.",
+    keywords: 'time,availability,available,free,night,afternoon,lunchtime,morning,late,early'
+  }
+
   ];
 
   // Inserts seed entries
