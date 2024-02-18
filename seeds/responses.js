@@ -24,11 +24,6 @@ exports.seed = async function(knex) {
       keywords: 'contact,questions,support,email,phone'
     },
     {
-      service_type: 'immediate',
-      responses: "Call us at (804) 661-2740 or email support@getneatfreakclean.com for assistance. Depending on availability, we will do our best to accomodate services.",
-      keywords: 'immediate,today,tomorrow'
-    },
-    {
       service_type: 'remove',
       responses: "Want to opt-out of our subscriber list? Just email us with 'Remove' in the subject, and we'll take care of it promptly.",
       keywords: 'remove,unsubscribe,opt-out,optout'
@@ -81,7 +76,7 @@ exports.seed = async function(knex) {
     {
       "service_type": "availability",
       "responses": "Need help right away? Email us at support@getneatfreakclean.com for assistance.",
-      "keywords": "availability,available, free, night,tomorrow,today,late,early,monday,tuesday,wednesday,thursday,friday,saturday,sunday"
+      "keywords": "availability,available,avail,free,night,tomorrow,today,late,early,monday,tuesday,wednesday,thursday,friday,saturday,sunday"
     },
   {
     service_type: 'services',
@@ -95,8 +90,8 @@ exports.seed = async function(knex) {
   },
   {
     "service_type": "checkStatement",
-    "responses": "Amazing! Is there anything else I can help with?",
-    "keywords": "Thank you, Sounds good, Appreciate it, Thanks, thank, cool, awesome, great, perfect, wonderful, fantastic, that's all, all set, good to go, settled, no more questions, all good, satisfied, happy, content, no further, that's it, okay, ok, fine, agreed, confirmation, confirmed, no more, nothing else, complete, concluded, done, finished, all clear"
+    "responses": "Perfect! Feel free to reach out for any additional help at support@getneatfreakclean.com",
+    "keywords": "Thank you,Sounds good,Appreciate it,Thanks,thank,cool,awesome,great,perfect,wonderful,fantastic,that's all,all set,good to go,no more questions,no I'm good,all good,satisfied,no further, that's it, okay,ok,fine,agreed,nothing else,all good"
   },
   {
     service_type: 'discount',
