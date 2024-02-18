@@ -1,3 +1,4 @@
+//Not currently in use
 function emptyChatbot(req,res,next){
     const chatData = req.body.data;
     if(!chatData){

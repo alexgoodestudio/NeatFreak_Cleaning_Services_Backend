@@ -12,5 +12,5 @@ async function listResponse(req, res, next) {
 }
 
 module.exports = {
-  listResponse: [emptyChatbot, findBestResponse, asyncErrorBoundary(listResponse)],
+  listResponse: [ findBestResponse, asyncErrorBoundary(listResponse)],
 };
