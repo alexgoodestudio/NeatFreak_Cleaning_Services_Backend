@@ -1,5 +1,4 @@
 exports.seed = async function(knex) {
-  // Deletes ALL existing entries
   await knex('chatbot').del();
 
   const responses = [
@@ -51,7 +50,7 @@ exports.seed = async function(knex) {
     {
       service_type: 'where',
       responses: "We proudly serve Richmond, Virginia, and the surrounding counties, bringing top-tier, eco-friendly cleaning services to your doorstep.",
-      keywords: 'where,location,service,Richmond,Virginia,Henrico,Short Pump,Manchester,Carytown,North Side, South Side,East End,Goochland'
+      keywords: 'where,location,Richmond,Virginia,Henrico,Short Pump,Manchester,Carytown,North Side, South Side,East End,Goochland'
     },
     {
       service_type: 'ecoFriendly',
@@ -76,7 +75,7 @@ exports.seed = async function(knex) {
     {
       "service_type": "availability",
       "responses": "Need help right away? Email us at support@getneatfreakclean.com for assistance.",
-      "keywords": "availability,available,avail,free,night,tomorrow,today,late,early,monday,tuesday,wednesday,thursday,friday,saturday,sunday"
+      "keywords": "availability,asap,as soon,sooner,available,avail,free,night,tomorrow,today,late,early,monday,tuesday,wednesday,thursday,friday,saturday,sunday"
     },
   {
     service_type: 'services',

@@ -2,6 +2,7 @@ const empty = require("../middleware/emptySubscribeForm");
 const service = require("./request.service");
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 const emailExists = require("../middleware/emailExists");
+const haveAtSymbol = require("../middleware/haveAtSymbol")
 
 async function list(req, res) {
   const data = await service.list();
@@ -10,7 +11,7 @@ async function list(req, res) {
 
 async function create(req, res) {
   const data = await service.create(req.body.data);
-  res.status(201).json({ data });
+  res.status(201).json({data});
 }
 
 async function read(req, res, next) {
@@ -36,7 +37,7 @@ async function destroy(req, res) {
 
 module.exports = {
   list: asyncErrorBoundary(list),
-  create: [empty, emailExists, asyncErrorBoundary(create)],
+  create: [empty, emailExists,haveAtSymbol, asyncErrorBoundary(create)],
   read: asyncErrorBoundary(read),
   destroy: asyncErrorBoundary(destroy)
 };
