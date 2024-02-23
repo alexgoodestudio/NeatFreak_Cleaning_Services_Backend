@@ -1,4 +1,4 @@
-const service = require("../request/request.service")
+const service = require("../subscribers/subscribers.service")
 
 async function emailExists(req, res, next) {
     let email = res.locals.email_address;

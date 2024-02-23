@@ -1,5 +1,5 @@
 const empty = require("../middleware/emptySubscribeForm");
-const service = require("./request.service");
+const service = require("./subscribers.service");
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 const emailExists = require("../middleware/emailExists");
 const haveAtSymbol = require("../middleware/haveAtSymbol")
@@ -15,13 +15,13 @@ async function create(req, res) {
 }
 
 async function read(req, res, next) {
-  const { estimate_id } = req.params;
+  const { subscriber_id } = req.params;
   try {
-    const data = await service.read(estimate_id);
+    const data = await service.read(subscriber_id);
     if (data) {
       res.json({ data });
     } else {
-      res.status(404).json({ error: "Estimate not found" });
+      res.status(404).json({ error: "Subscriber not found" });
     }
   } catch (error) {
     next(error);
@@ -30,8 +30,8 @@ async function read(req, res, next) {
 
 
 async function destroy(req, res) {
-  const { estimate_id } = req.params;
-  await service.destroy(estimate_id); 
+  const { subscriber_id } = req.params;
+  await service.destroy(subscriber_id); 
   res.status(204).end(); 
 }
 

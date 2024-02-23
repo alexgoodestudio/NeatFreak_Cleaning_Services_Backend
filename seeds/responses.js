@@ -4,33 +4,28 @@ exports.seed = async function(knex) {
   const responses = [
     {
       service_type: 'pricing',
-      responses: "We don't have a one-size-fits-all pricing model because every home has unique needs. To ensure we provide a tailored service, we offer FREE In-Home estimates. Book yours today through the 'In-Home Estimates' tab or reach out to us at support@getneatfreakclean.com.",
+      responses: "We don't have a one-size-fits-all pricing model because every home has unique needs. To ensure we provide a tailored service, we offer FREE Virtual estimates. Book yours today through the 'Virtual Estimates' tab or reach out to us at support@getneatfreakclean.com with your details.",
       keywords: 'pricing,cost,charge,price,pricesestimate'
     },
     {
       service_type: 'move',
-      responses: "Transitioning to a new place? We've got you covered with our move-in/out cleaning services, ensuring your space is pristine. Let us help make your move smoother.",
+      responses: "Transitioning to a new place? We've got you covered with our move-in/out cleaning  services, ensuring your space is pristine. Let us help make your move smoother.",
       keywords: 'move,moving,relocation,transition'
     },
     {
       service_type: 'cancellation',
-      responses: "Life happens, and we understand! For cancellations, please give us a 48-hour notice. If you need to cancel within 48 hours, reach out to us directly at (804) 661-2740, and we'll assist you.",
+      responses: "Life happens, no problem! For cancellations, please give us a 48-hour notice. If you need to cancel within 48 hours,you can text or call us directly at (804) 661-2740, and we'll assist you.",
       keywords: 'cancellation,cancel,canceling,notice'
     },
     {
       service_type: 'contact',
       responses: "Got questions? We're here to help! Call us at (804) 661-2740 or email support@getneatfreakclean.com for assistance.",
-      keywords: 'contact,questions,support,email,phone'
+      keywords: 'contact,touch,questions,support,email,phone'
     },
     {
       service_type: 'remove',
       responses: "Want to opt-out of our subscriber list? Just email us with 'Remove' in the subject, and we'll take care of it promptly.",
       keywords: 'remove,unsubscribe,opt-out,optout'
-    },
-    {
-      service_type: 'thank you',
-      responses: "Your welcome!",
-      keywords: 'thank you'
     },
     {
       service_type: 'forMoreInfo',
@@ -39,12 +34,12 @@ exports.seed = async function(knex) {
     },
     {
       service_type: 'howToBook',
-      responses: "First time with us or moving to a new residence? Start with our In-Home Estimate. Simply click the 'In-Home Estimate' tab or email us your details at support@getneatfreakclean.com, and we'll follow up ASAP.",
-      keywords: 'book,hire,booking,appointment,estimate'
+      responses: "Would you like to book an appointment? Start with our Virtual Estimate. Simply click the 'Virtual Estimate' tab to schedule an virtual estimate, or you can email us your details at support@getneatfreakclean.com, and we'll follow up ASAP about setting up an apoointment.",
+      keywords: 'book,hire,booking,schedule,times,appointment,estimate'
     },
     {
       service_type: 'newsletter',
-      responses: "Join our newsletter to keep up with special offers created just for you!",
+      responses: "Join our newsletter to keep up with special offers created just for you by following Subscribe tab at the top of page!",
       keywords: 'newsletter,news letter,subscribe,subscriber'
     },
     {
@@ -68,29 +63,24 @@ exports.seed = async function(knex) {
       keywords: 'recurring cleaning,recurring,reoccuring,consistently clean,consistently,consistent,2 weeks,weekly,bi-weekly,monthly'
     },
     {
-      service_type: 'howWeWork',
-      responses: "Ready for a cleaner space? Book an easy and quick In-Home estimate at a time that suits you. Our efficient 15-minute process is designed to understand your specific needs, ensuring a cleaning plan that's just right for you.",
-      keywords: 'process,how'
-    },
-    {
-      "service_type": "availability",
+      "service_type": "ASAP",
       "responses": "Need help right away? Email us at support@getneatfreakclean.com for assistance.",
-      "keywords": "availability,asap,as soon,sooner,available,avail,free,night,tomorrow,today,late,early,monday,tuesday,wednesday,thursday,friday,saturday,sunday"
+      "keywords": "availability,asap,as soon,soon,times,sooner,free,night,tomorrow,today,late,early,monday,tuesday,wednesday,thursday,friday,saturday,sunday"
     },
   {
     service_type: 'services',
     responses: "We offer one time, recurring, and moving in/ out cleaning services! For additional information feel free to message us at support@getneatfreakclean.com for planning your next big clean!",
-    keywords: 'services,type,types'
+    keywords: 'services,type,types,offer'
   },
   {
     service_type: 'greeting',
     responses: "Hey there! How can I help you?",
-    keywords: 'hello,hi,hii,hiii,hellooo,howdy,good morning,good evening,whats up,hey'
+    keywords: 'hello,hi,good afternoon,hii,hiii,hellooo,howdy,good morning,good evening,whats up,hey'
   },
   {
     "service_type": "checkStatement",
     "responses": "Perfect! Feel free to reach out for any additional help at support@getneatfreakclean.com",
-    "keywords": "Thank you,Sounds good,Appreciate it,Thanks,thank,cool,awesome,great,perfect,wonderful,fantastic,that's all,all set,good to go,no more questions,no I'm good,all good,satisfied,no further, that's it, okay,ok,fine,agreed,nothing else,all good"
+    "keywords": "Thank you,Appreciate it,Thanks,thank,cool,awesome,great,perfect,wonderful,fantastic,that's all,all set,good to go,no more questions,no I'm good,all good,no further, that's it,fine,agreed,nothing else,all good"
   },
   {
     service_type: 'discount',

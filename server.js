@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const knex = require("./api/db/connection");
-const requestRouter = require("./api/request/request.router");
+const subscriberRouter = require("./api/subscribers/subscribers.router");
 const cors = require('cors');
 const chatRouter = require('./api/chat/chat.router')
 
@@ -17,12 +17,12 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/request", requestRouter);
+app.use("/subscribers", subscriberRouter);
 app.use("/responses", chatRouter);
 
 
 app.get('/', (req, res) => {
-  res.redirect('/request/');
+  res.redirect('/subscribers/');
 });
 
 app.use((req, res, next) => {

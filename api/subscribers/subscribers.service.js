@@ -1,33 +1,33 @@
 const knex = require("../db/connection")
 
 function list() {
-  return knex('estimate')
+  return knex('subscriber')
     .select("*")
 }
 
-function create(newEstimate) {
-  return knex('estimate')
-    .insert(newEstimate)
+function create(newsubscribers) {
+  return knex('subscriber')
+    .insert(newsubscribers)
     .returning("*")
     .then((data) => data[0]);
 }
 
 function read(id) {
-  return knex('estimate')
+  return knex('subscriber')
     .select("*")
-    .where({ estimate_id: id }) 
+    .where({ subscriber_id: id }) 
     .first();
 }
 function readEmail(email) {
-  return knex('estimate')
+  return knex('subscriber')
     .select("*")
     .where({ email_address: email }) 
     .first();
 }
 
 function destroy(id) {
-  return knex('estimate')
-    .where({ estimate_id: id }) 
+  return knex('subscriber')
+    .where({ subscriber_id: id }) 
     .del();
 }
 

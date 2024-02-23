@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const controller = require("./request.controller");
+const controller = require("./subscribers.controller");
 const methodNotAllowed = require("../errors/methodNotAllowed");
 
 
@@ -8,7 +8,7 @@ router.route("/")
     .post(controller.create)
     .all(methodNotAllowed);
 
-router.route("/:estimate_id")
+router.route("/:subscriber_id")
     .get(controller.read)
     .delete(controller.destroy)
     .all(methodNotAllowed);
