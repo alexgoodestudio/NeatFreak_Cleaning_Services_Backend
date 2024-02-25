@@ -2,9 +2,10 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const knex = require("./api/db/connection");
-const subscriberRouter = require("./api/subscribers/subscribers.router");
 const cors = require('cors');
+const subscriberRouter = require("./api/subscribers/subscribers.router");
 const chatRouter = require('./api/chat/chat.router')
+const estimateRouter = require('./api/estimates/estimates.router')
 
 app.use(cors());
 app.use(express.json());
@@ -19,6 +20,7 @@ app.use((req, res, next) => {
 
 app.use("/subscribers", subscriberRouter);
 app.use("/responses", chatRouter);
+app.use("/estimates", chatRouter);
 
 
 app.get('/', (req, res) => {
