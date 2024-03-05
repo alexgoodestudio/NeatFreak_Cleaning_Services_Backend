@@ -1,6 +1,6 @@
-const empty = require("../middleware/emptySubscribeForm");
 const service = require("./subscribers.service");
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
+const empty = require("../middleware/emptySubscribeForm");
 const emailExists = require("../middleware/emailExists");
 const haveAtSymbol = require("../middleware/haveAtSymbol")
 
