@@ -18,14 +18,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use("/estimates", estimateRouter);
 app.use("/subscribers", subscriberRouter);
 app.use("/responses", chatRouter);
-app.use("/estimates", chatRouter);
 
-
-app.get('/', (req, res) => {
-  res.redirect('/subscribers/');
-});
 
 app.use((req, res, next) => {
   next({ status: 404, message: `Not found: ${req.originalUrl}` });

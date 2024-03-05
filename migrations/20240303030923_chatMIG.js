@@ -6,6 +6,7 @@ exports.up = function(knex) {
         table.string('service_type').nullable();
         table.text('responses').nullable(); 
         table.timestamps(true, true);
+        table.text('keywords').nullable(); 
       });
   };
   

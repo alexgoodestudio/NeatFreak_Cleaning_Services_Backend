@@ -4,9 +4,12 @@ exports.up = function(knex) {
       table.string("name");
       table.string("email_address");
       table.string("phone_number");
-      table.integer('numberOfBeds').notNullable();
-      table.integer('numberOfBaths').notNullable();
-      table.integer('squareFootage').notNullable();
+      table.string("address");
+      table.string('number_of_beds');
+      table.string('number_of_baths');
+      table.string('square_footage');
+      table.string('additional_info');
+      table.boolean('checkbox').defaultTo(false);
       table.timestamps(true, true);
     });
   };
@@ -18,3 +21,4 @@ exports.up = function(knex) {
       }
     });
   };
+  
