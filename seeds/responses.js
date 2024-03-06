@@ -4,17 +4,17 @@ exports.seed = async function(knex) {
   const responses = [
     {
       service_type: 'pricing',
-      responses: "We don't have a one-size-fits-all pricing model because every home has unique needs. To ensure we provide a tailored service, we offer FREE Virtual estimates. Book yours today through the 'Virtual Estimates' tab or reach out to us at support@getneatfreakclean.com with your details.",
+      responses: "We don't have a one-size-fits-all pricing model because every home has unique needs. To ensure we provide a tailored service, we offer FREE  estimates. Book yours today through the 'Booking/ Estimates' tab or reach out to us at support@getneatfreakclean.com with your details.",
       keywords: 'pricing,cost,charge,price,pricesestimate'
     },
     {
       service_type: 'move',
-      responses: "Transitioning to a new place? We've got you covered with our move-in/out cleaning  services, ensuring your space is pristine. Let us help make your move smoother.",
+      responses: "Transitioning to a new place? We've got you covered with our move-in/out cleaning services, ensuring your space is pristine. Let us help make your move smoother. Head on over to the Booking/ Estimates tab at the top to get in contact to schedule or request an estimate.",
       keywords: 'move,moving,relocation,transition'
     },
     {
       service_type: 'cancellation',
-      responses: "Life happens, no problem! For cancellations, please give us a 48-hour notice. If you need to cancel within 48 hours,you can text or call us directly at (804) 661-2740, and we'll assist you.",
+      responses: "Life happens, no problem! For cancellations, please give us a 48-hour notice and email us at support@getneatfreakclean.com. If you need to cancel within 48 hours, you can text or call us directly at (804) 661-2740, and we'll assist you.",
       keywords: 'cancellation,cancel,canceling,notice'
     },
     {
@@ -34,17 +34,17 @@ exports.seed = async function(knex) {
     },
     {
       service_type: 'howToBook',
-      responses: "Would you like to book an appointment? Start with our Virtual Estimate. Simply click the 'Virtual Estimate' tab to schedule an virtual estimate, or you can email us your details at support@getneatfreakclean.com, and we'll follow up ASAP about setting up an apoointment.",
+      responses: "Would you like to book an appointment? Simply click the 'Booking/Estimate' tab to schedule an estimate/ set up an appointment. Additionally you can email us your details at support@getneatfreakclean.com, and we'll follow up ASAP about setting up an apointment.",
       keywords: 'book,hire,booking,schedule,times,appointment,estimate'
     },
     {
       service_type: 'newsletter',
-      responses: "Join our newsletter to keep up with special offers created just for you by following Subscribe tab at the top of page!",
+      responses: "Join our newsletter to keep up with special offers created just for you by following the Subscribe tab at the top of page!",
       keywords: 'newsletter,news letter,subscribe,subscriber'
     },
     {
       service_type: 'where',
-      responses: "We proudly serve Richmond, Virginia, and the surrounding counties, bringing top-tier, eco-friendly cleaning services to your doorstep.",
+      responses: "We proudly serve Richmond, Virginia, and surrounding areas, bringing top-tier, eco-friendly cleaning services to your doorstep.",
       keywords: 'where,location,Richmond,Virginia,Henrico,Short Pump,Manchester,Carytown,North Side, South Side,East End,Goochland'
     },
     {
@@ -65,7 +65,7 @@ exports.seed = async function(knex) {
     {
       "service_type": "ASAP",
       "responses": "Need help right away? Email us at support@getneatfreakclean.com for assistance.",
-      "keywords": "availability,asap,as soon,soon,times,sooner,free,night,tomorrow,today,late,early,monday,tuesday,wednesday,thursday,friday,saturday,sunday"
+      "keywords": "asap,as soon,soon,times,sooner,free,night,tomorrow,today,late,early,this monday,this tuesday,this wednesday,this thursday,this friday,this saturday,this sunday"
     },
   {
     service_type: 'services',
@@ -75,7 +75,7 @@ exports.seed = async function(knex) {
   {
     service_type: 'greeting',
     responses: "Hey there! How can I help you?",
-    keywords: 'hello,hi,good afternoon,hii,hiii,hellooo,howdy,good morning,good evening,whats up,hey'
+    keywords: 'hello,hi,good afternoon,hii,hiii,hellooo,howdy,good morning,good afternoon,good evening,whats up,hey'
   },
   {
     "service_type": "checkStatement",
