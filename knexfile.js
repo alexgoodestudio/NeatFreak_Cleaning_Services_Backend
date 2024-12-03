@@ -10,7 +10,10 @@ if (!DATABASE_URL) {
 module.exports = {
   development: {
     client: "postgresql",
-    connection: DATABASE_URL,
+    connection: {
+      connectionString: DATABASE_URL,
+      ssl: { rejectUnauthorized: false },  // Ensure SSL in development
+    },
     migrations: {
       directory: path.join(__dirname, 'migrations')
     }
@@ -19,7 +22,7 @@ module.exports = {
     client: "postgresql",
     connection: {
       connectionString: DATABASE_URL,
-      ssl: { rejectUnauthorized: false } 
+      ssl: { rejectUnauthorized: false },  // Ensure SSL in production
     },
     migrations: {
       directory: path.join(__dirname, 'migrations')
