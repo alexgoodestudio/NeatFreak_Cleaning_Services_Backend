@@ -5,7 +5,7 @@ exports.seed = async function(knex) {
     {
       service_type: 'pricing',
       responses: "We don't have a one-size-fits-all pricing model because every home has unique needs. To ensure we provide a tailored service, we offer FREE  estimates. Book yours today through the 'Booking/ Estimates' tab or reach out to us at support@getneatfreakclean.com with your details.",
-      keywords: 'pricing,cost,charge,price,pricesestimate'
+      keywords: 'pricing,cost,charge,price,prices,estimate'
     },
     {
       service_type: 'move',
