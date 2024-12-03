@@ -12,7 +12,9 @@ module.exports = {
     client: "postgresql",
     connection: {
       connectionString: DATABASE_URL,
-      ssl: { rejectUnauthorized: false },  // Ensure SSL in development
+      ssl: {
+        rejectUnauthorized: false // You can set this to true if you want a stricter validation
+      }
     },
     migrations: {
       directory: path.join(__dirname, 'migrations')
@@ -22,7 +24,9 @@ module.exports = {
     client: "postgresql",
     connection: {
       connectionString: DATABASE_URL,
-      ssl: { rejectUnauthorized: false },  // Ensure SSL in production
+      ssl: {
+        rejectUnauthorized: false // Same for production
+      }
     },
     migrations: {
       directory: path.join(__dirname, 'migrations')
