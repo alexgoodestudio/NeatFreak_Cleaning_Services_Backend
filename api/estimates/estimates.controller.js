@@ -71,7 +71,7 @@ async function update(req, res) {
 module.exports = {
     read: [asyncErrorBoundary(read)],
     list: [asyncErrorBoundary(list)],
-    post: [emptyEstimateForm, emailExists, haveAtSymbol, asyncErrorBoundary(create)],
-    update: [empty, emailExists, haveAtSymbol, asyncErrorBoundary(update)],
+    post: [emptyEstimateForm, haveAtSymbol, asyncErrorBoundary(create)],
+    update: [empty, haveAtSymbol, asyncErrorBoundary(update)],
     destroy: [ asyncErrorBoundary(destroy)]
 }
